@@ -65,6 +65,16 @@
 
     // 8. Reduce Exercise
     // Sum up the instances of each of these
+    const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
+    const vehicle_map = new Map()
+    for (vehicle of data) {
+      if (vehicle_map.has(vehicle)) {
+        vehicle_map.set(vehicle, vehicle_map.get(vehicle) + 1)
+      } else {
+        vehicle_map.set(vehicle, 1)
+      }
+    }
+    vehicle_map.forEach((value, key) => console.log(`${key} has count ${value}`))
 
   </script>
 </body>
